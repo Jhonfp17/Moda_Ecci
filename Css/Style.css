@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+    --negro: #050505;
+    --negro-suave: #0d0d0d;
+    --gris-oscuro: #151515;
+    --dorado: #b78338;
+    --dorado-claro: #d2a45f;
+    --blanco: #ffffff;
+    --gris-texto: #d6d6d6;
+    --borde: rgba(183, 131, 56, 0.35);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
+    line-height: 1.7;
+}
+
+section {
+    padding: 90px 0;
+    background: var(--negro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+    font-family: "Playfair Display", serif;
+    color: var(--dorado);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    background: var(--dorado);
+    margin-top: 12px;
+}
+
+p {
+    color: var(--gris-texto);
+}
+
+/* NAVBAR */
+
+#navegacion {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(183, 131, 56, 0.25);
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    color: var(--dorado) !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--blanco) !important;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 10px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--dorado-claro) !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--dorado);
+    transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    background: var(--dorado);
+    border: none;
+}
+
+#btn-traducir {
+    background: transparent;
+    color: var(--blanco);
+    border: 1px solid var(--dorado);
+    border-radius: 0;
+    padding: 8px 18px;
+    font-weight: 700;
+}
+
+#btn-traducir:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+/* INICIO */
+
+#inicio {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.88) 42%, rgba(0, 0, 0, 0.45) 100%),
+        url("../Img/Color.jpg") center right / cover no-repeat;
+    position: relative;
+}
+
+#inicio .container {
+    text-align: left !important;
+}
+
+#inicio h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    color: var(--dorado);
+    max-width: 650px;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+#inicio p {
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    max-width: 620px;
+    color: var(--blanco);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#inicio .btn,
+section .btn {
+    background: var(--dorado);
+    color: var(--blanco);
+    border: 1px solid var(--dorado);
+    border-radius: 0;
+    padding: 13px 34px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+#inicio .btn:hover,
+section .btn:hover {
+    background: transparent;
+    color: var(--dorado);
+    border-color: var(--dorado);
+}
+
+/* SOBRE EL EVENTO */
+
+#sobre-el-evento {
+    background: var(--negro);
+}
+
+#sobre-el-evento h5 {
+    color: var(--dorado-claro);
+}
+
+#tarjeta-sara-viloria {
+    background: var(--negro-suave);
+    border: 1px solid var(--borde);
+    padding: 35px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+}
+
+#avatar-sara-viloria {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 2px solid var(--dorado);
+    color: var(--dorado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#rol-conferencista {
+    color: var(--dorado-claro);
+    font-weight: 700;
+}
+
+blockquote {
+    border-left: 4px solid var(--dorado);
+    padding-left: 18px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* EXPERIENCIA */
+
+#experiencia {
+    background: #090909;
+}
+
+.accordion-item {
+    background: var(--negro-suave);
+    border: 1px solid var(--borde);
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    background: var(--negro-suave);
+    color: var(--blanco);
+    font-weight: 800;
+    padding: 20px 24px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: #111111;
+    padding: 25px;
+}
+
+/* GALERIA */
+
+#galeria {
+    background: var(--negro);
+}
+
+#carrusel-fotos-evento {
+    border: 1px solid var(--borde);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+}
+
+.carousel-item img {
+    height: 620px;
+    object-fit: cover;
+    filter: brightness(0.68) contrast(1.12);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.72);
+    border-left: 4px solid var(--dorado);
+    padding: 18px 24px;
+    left: 8%;
+    right: 8%;
+    bottom: 35px;
+}
+
+.carousel-caption p {
+    color: var(--blanco);
+    margin: 0;
+}
+
+/* GLOSARIO */
+
+#glosario {
+    background: #0b0b0b;
+}
+
+#glosario table,
+#glosario .table {
+    background: #111111;
+    color: var(--blanco);
+    border: 1px solid var(--borde);
+}
+
+#glosario thead {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+#glosario th,
+#glosario td {
+    padding: 16px;
+    border-color: rgba(183, 131, 56, 0.22);
+}
+
+#glosario tbody tr:hover {
+    background: #181818;
+}
+
+/* SOSTENIBILIDAD */
+
+#sostenibilidad {
+    background: var(--negro);
+}
+
+.card {
+    background: var(--negro-suave);
+    color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 0;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--dorado);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.icono-reflexion {
+    width: 58px;
+    height: 58px;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+}
+
+.card-title {
+    color: var(--dorado);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: var(--gris-texto);
+}
+
+/* FOOTER */
+
+#pie-de-pagina {
+    background: #030303;
+    color: var(--blanco);
+    padding: 60px 0 25px;
+    border-top: 1px solid var(--borde);
+}
+
+#pie-de-pagina h5 {
+    color: var(--dorado);
+}
+
+#pie-de-pagina p {
+    color: var(--gris-texto);
+}
+
+#linea-footer {
+    border-color: rgba(183, 131, 56, 0.3);
+}
+
+#creditos-footer {
+    color: #bdbdbd;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    section {
+        padding: 70px 0;
+    }
+
+    #inicio {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.9)),
+            url("../Img/muestra-desfile-moda-pasarela-fondo-blanco_274326-1106.avif") center / cover no-repeat;
+    }
+
+    #inicio .container {
+        text-align: center !important;
+    }
+
+    #inicio h1,
+    #inicio p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #btn-traducir {
+        margin-top: 15px;
+        margin-left: 0 !important;
+    }
+
+    .carousel-item img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    #inicio {
+        min-height: 85vh;
+        padding: 80px 0;
+    }
+
+    #inicio h1 {
+        font-size: 3rem;
+    }
+
+    .carousel-item img {
+        height: 350px;
+    }
+
+    .carousel-caption {
+        position: static;
+        background: #080808;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    #tarjeta-sara-viloria,
+    .card-body {
+        padding: 24px;
+    }
+}
